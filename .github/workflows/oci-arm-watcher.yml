@@ -26,6 +26,9 @@ jobs:
         shell: powershell
 
       - name: Run ARM watcher script
-        run: pwsh ./oracle-arm-watcher.ps1
+        run: |
+          $env:Path += ";$env:USERPROFILE\bin"
+          pwsh ./oracle-arm-watcher.ps1
+        shell: powershell
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
