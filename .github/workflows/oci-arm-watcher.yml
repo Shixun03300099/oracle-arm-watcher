@@ -13,8 +13,10 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Setup OCI CLI
-        uses: oracle/setup-oci-cli@v1
+      - name: Install OCI CLI manually
+        run: |
+          Invoke-WebRequest -Uri https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.ps1 -OutFile install.ps1
+          powershell -ExecutionPolicy Bypass -File install.ps1 -AcceptAllDefaults
 
       - name: Write OCI config and key
         run: |
