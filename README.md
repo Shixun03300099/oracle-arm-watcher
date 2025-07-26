@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Resolving Oracle Cloud "Out of Capacity" issue and getting free VPS with 4 ARM cores / 24GB of memory
 
 <p align="center">
@@ -403,3 +404,6 @@ from the instance details page and connect from your other instance in the same 
 ```bash
 ssh -i ~/.ssh/id_rsa opc@instance-20210714-xxxx.subnet.vcn.oraclevcn.com
 ```
+=======
+# oracle-arm-watcher
+>>>>>>> 125e44949f665bbc4a0702feb96111d744638956
