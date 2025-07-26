@@ -7,6 +7,9 @@ on:
 
 jobs:
   check-capacity:
+    concurrency:
+      group: arm-capacity-check
+      cancel-in-progress: true
     runs-on: windows-latest
 
     steps:
